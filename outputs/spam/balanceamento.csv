@@ -1,0 +1,4 @@
+classe,n,pct_do_total
+1 = spam (é spam?),653,12.63
+0 = ham (legítima),4518,87.37
+Total,5171,100.0

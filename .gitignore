@@ -1,0 +1,5 @@
+data/raw/*
+!data/raw/.gitkeep
+data/fraude.csv
+__pycache__/
+.ipynb_checkpoints/

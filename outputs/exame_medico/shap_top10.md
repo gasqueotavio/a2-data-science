@@ -1,0 +1,12 @@
+| posicao | feature | media_abs_shap | correlacao_valor_shap | leitura |
+|---|---|---|---|---|
+| 1 | worst texture | 1.1791 | 1.0 | valores altos aumentam a saída |
+| 2 | mean concave points | 0.8246 | 1.0 | valores altos aumentam a saída |
+| 3 | worst symmetry | 0.6661 | 1.0 | valores altos aumentam a saída |
+| 4 | radius error | 0.6407 | 1.0 | valores altos aumentam a saída |
+| 5 | worst radius | 0.6103 | 1.0 | valores altos aumentam a saída |
+| 6 | worst concavity | 0.5825 | 1.0 | valores altos aumentam a saída |
+| 7 | compactness error | 0.5674 | -1.0 | valores altos diminuem a saída |
+| 8 | worst area | 0.5582 | 1.0 | valores altos aumentam a saída |
+| 9 | mean concavity | 0.5568 | 1.0 | valores altos aumentam a saída |
+| 10 | worst perimeter | 0.4912 | 1.0 | valores altos aumentam a saída |

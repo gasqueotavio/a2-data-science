@@ -1,0 +1,6 @@
+| faixa | regra | n | pct_populacao_sobre_N | n_positivos | pct_positivos_sobre_n_faixa | n_negativos | pct_negativos_sobre_n_faixa |
+|---|---|---|---|---|---|---|---|
+| Negativa automática | p < t1 | 909 | 87.83 | 14 | 1.54 | 895 | 98.46 |
+| Análise manual | t1 ≤ p < t2 | 0 | 0.0 | 0 |  | 0 |  |
+| Positiva automática | p ≥ t2 | 126 | 12.17 | 117 | 92.86 | 9 | 7.14 |
+| Total | t1 = 0.3, t2 = 0.31 | 1035 | 100.0 | 131 | 12.66 | 904 | 87.34 |

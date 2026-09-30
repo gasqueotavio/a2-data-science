@@ -1,0 +1,4 @@
+modelo,metrica_cv,cv_average_precision_media,cv_average_precision_desvio,cv_folds,candidatos_testados,tempo_tuning_s,melhores_hiperparametros
+Regressão Logística,average_precision,0.9736,0.0119,5,48,33.6023,"C=10; tfidf__min_df=1; tfidf__ngram_range=(1, 2); tfidf__sublinear_tf=True"
+Naive Bayes Multinomial,average_precision,0.9715,0.013,5,60,6.9058,"alpha=0.1; tfidf__min_df=2; tfidf__ngram_range=(1, 2); tfidf__sublinear_tf=True"
+LinearSVC calibrado,average_precision,0.9744,0.0119,5,48,5.0927,"estimator__C=1; tfidf__min_df=1; tfidf__ngram_range=(1, 2); tfidf__sublinear_tf=True"

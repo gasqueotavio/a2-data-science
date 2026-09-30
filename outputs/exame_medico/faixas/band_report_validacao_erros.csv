@@ -1,0 +1,9 @@
+metrica,valor,valor_pct,numerador,denominador,descricao_denominador,descricao
+fn_auto,0.0,,0,,— (contagem),positivos classificados automaticamente como negativos (p < t1)
+fn_auto_sobre_positivos,0.0,0.0,0,43,total de positivos,proporção dos positivos que caíram na faixa negativa automática
+fn_auto_sobre_N,0.0,0.0,0,114,N (total de instâncias),proporção de N que é positivo e caiu na faixa negativa automática
+fp_auto,7.0,,7,,— (contagem),negativos classificados automaticamente como positivos (p ≥ t2)
+fp_auto_sobre_negativos,0.0986,9.86,7,71,total de negativos,proporção dos negativos que caíram na faixa positiva automática
+fp_auto_sobre_N,0.0614,6.14,7,114,N (total de instâncias),proporção de N que é negativo e caiu na faixa positiva automática
+cobertura_automatica,0.9386,93.86,107,114,N (total de instâncias),proporção de N decidida automaticamente (fora da faixa manual)
+volume_manual,0.0614,6.14,7,114,N (total de instâncias),proporção de N encaminhada à análise manual

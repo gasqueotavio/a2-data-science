@@ -1,0 +1,8 @@
+Domínio: exame_medico
+Modelo explicado: Regressão Logística (LogisticRegression)
+Explainer: LinearExplainer (interventional)
+Saída do modelo explicada: log-odds (escala linear) da classe positiva da Regressão Logística
+Dados explicados: 114 instâncias aleatórias do conjunto de TESTE (random_state=42), transformadas pelo pré-processamento do pipeline
+Conjunto de fundo (background): 100 instâncias aleatórias do TREINO
+Número de features após o pré-processamento: 30
+Beeswarm: max_display=15; cor = valor da feature (vermelho alto, azul baixo); eixo X = contribuição SHAP para a saída explicada

@@ -1,0 +1,4 @@
+conjunto,n,pct_do_total,n_positivos,pct_positivos,n_negativos
+treino,341,59.93,127,37.24,214
+validacao,114,20.04,43,37.72,71
+teste,114,20.04,42,36.84,72
