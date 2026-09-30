@@ -14,7 +14,7 @@ a2/
 ├── data/raw/            # arquivos brutos (colocados manualmente)
 ├── data/*.csv           # bases padronizadas (geradas por prepare_data.py)
 ├── src/                 # config, prepare_data, cutoff_hist (Parte 1), pipeline, evaluate, explain
-├── notebooks/           # 01_spam, 02_fraude, 03_exame_medico
+├── notebooks/           # 01_spam, 02_fraude, 03_exame_medico (versões _explicado e _sem_comentarios)
 ├── tests/               # testes da Parte 1 (pytest)
 └── outputs/<dominio>/   # figuras, tabelas (CSV + MD), modelos, resumo_resultados.md
 ```
@@ -55,7 +55,14 @@ O script padroniza a coluna-alvo como `target` (1 = classe positiva), remove dup
    !pip install -q -r requirements.txt
    !python -m src.prepare_data
    ```
-4. Rode os notebooks de cima a baixo, nesta ordem: `03_exame_medico.ipynb`, `01_spam.ipynb`, `02_fraude.ipynb`.
+4. Rode os notebooks de cima a baixo, nesta ordem: `03_exame_medico`, `01_spam`, `02_fraude`.
+
+Cada domínio tem duas versões com **exatamente o mesmo código**:
+
+- `*_explicado.ipynb`: texto antes de cada etapa e comentário em cada linha, explicando o que acontece;
+- `*_sem_comentarios.ipynb`: só o código.
+
+Basta rodar uma das duas; ambas geram os mesmos resultados em `outputs/`.
 
 Tudo é salvo em `outputs/<dominio>/` no Drive. Após o tuning, cada modelo é salvo em `outputs/<dominio>/models/<modelo>.joblib`; se o runtime desconectar, basta rodar o notebook de novo e os modelos já treinados são carregados. Para forçar o retreino, use `FORCE_RETRAIN = True` no topo do notebook.
 

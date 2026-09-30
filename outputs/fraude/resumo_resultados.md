@@ -139,14 +139,14 @@ Random Forest — maior average_precision_AP na validação = 0.8735
 
 | etapa | segundos |
 |---|---|
-| carregar dados | 0.8602 |
-| split | 0.1575 |
-| tuning Regressão Logística | 0.0013 |
-| tuning Random Forest | 0.013 |
-| tuning Gradient Boosting (HGB) | 0.0062 |
-| avaliação na validação | 0.4281 |
-| avaliação no teste | 0.1731 |
-| SHAP | 6.9804 |
+| carregar dados | 1.2683 |
+| split | 0.2556 |
+| tuning Regressão Logística | 0.0021 |
+| tuning Random Forest | 0.0219 |
+| tuning Gradient Boosting (HGB) | 0.0101 |
+| avaliação na validação | 0.7021 |
+| avaliação no teste | 0.3098 |
+| SHAP | 8.9802 |
 
 ## Figuras geradas
 

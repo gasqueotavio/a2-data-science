@@ -139,14 +139,14 @@ Regressão Logística — maior average_precision_AP na validação = 0.9790
 
 | etapa | segundos |
 |---|---|
-| carregar dados | 0.0093 |
-| split | 0.0047 |
-| tuning Regressão Logística | 0.0368 |
-| tuning Naive Bayes Multinomial | 0.0086 |
-| tuning LinearSVC calibrado | 0.0372 |
-| avaliação na validação | 0.0677 |
-| avaliação no teste | 0.0196 |
-| SHAP | 1.1534 |
+| carregar dados | 0.0115 |
+| split | 0.0049 |
+| tuning Regressão Logística | 0.0574 |
+| tuning Naive Bayes Multinomial | 0.0123 |
+| tuning LinearSVC calibrado | 0.0667 |
+| avaliação na validação | 0.0853 |
+| avaliação no teste | 0.0272 |
+| SHAP | 1.8216 |
 
 ## Figuras geradas
 

@@ -138,14 +138,14 @@ Regressão Logística — maior roc_auc na validação = 0.9957
 
 | etapa | segundos |
 |---|---|
-| carregar dados | 0.0046 |
-| split | 0.0023 |
+| carregar dados | 0.0049 |
+| split | 0.0042 |
 | tuning Regressão Logística | 0.0021 |
-| tuning Random Forest | 0.0101 |
-| tuning SVC (RBF) | 0.0012 |
-| avaliação na validação | 0.0172 |
-| avaliação no teste | 0.0048 |
-| SHAP | 0.5075 |
+| tuning Random Forest | 0.0174 |
+| tuning SVC (RBF) | 0.0013 |
+| avaliação na validação | 0.0314 |
+| avaliação no teste | 0.0075 |
+| SHAP | 0.8167 |
 
 ## Figuras geradas
 
