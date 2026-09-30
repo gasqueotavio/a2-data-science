@@ -1,6 +1,6 @@
 pandas
 numpy
-scikit-learn>=1.3
+scikit-learn==1.5.2   # mesma versão usada no treino: os modelos salvos em outputs/*/models carregam sem retreinar
 matplotlib
 shap
 joblib
