@@ -1,0 +1,3 @@
+| modelo | conjunto | limiar | acuracia | precisao | recall | f1 | roc_auc | pr_auc_trapezoidal | average_precision_AP | TN | FP | FN | TP |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Random Forest | teste | 0.5 | 0.9995 | 0.9571 | 0.7053 | 0.8121 | 0.9245 | 0.8113 | 0.8029 | 56648 | 3 | 28 | 67 |

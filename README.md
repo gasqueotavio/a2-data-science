@@ -65,7 +65,7 @@ Tudo é salvo em `outputs/<dominio>/` no Drive. Após o tuning, cada modelo é s
 |---|---|---|
 | `03_exame_medico` | ~1 min | 2–4 min |
 | `01_spam` | ~1 min | 3–6 min |
-| `02_fraude` | ~5 min numa amostra de 15% (base completa não rodada localmente) | 2–4 h (só o tuning da Random Forest pode passar de 2 h; os checkpoints evitam perder o que já terminou) |
+| `02_fraude` | ~51 min (12 núcleos; 49 min só no tuning da Random Forest) | 2–4 h (só o tuning da Random Forest pode passar de 2 h; os checkpoints evitam perder o que já terminou) |
 
 Com os checkpoints já salvos, qualquer notebook roda em poucos segundos (spam e exame médico) ou poucos minutos (fraude, por causa do SHAP e das predições).
 

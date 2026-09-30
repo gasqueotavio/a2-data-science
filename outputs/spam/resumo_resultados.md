@@ -71,82 +71,82 @@ Regressão Logística — maior average_precision_AP na validação = 0.9790
 
 ## Cortes (escolhidos na validação)
 
-- t1 = 0.30
-- t2 = 0.31
-- max_fn_rate = 0.1 (sobre positivos)
-- max_fp_rate = 0.01 (sobre negativos)
+- t1 = 0.11
+- t2 = 0.70
+- max_fn_rate = 0.03 (sobre positivos)
+- max_fp_rate = 0.002 (sobre negativos)
 
 ## Trade-off (10 melhores pares viáveis, validação)
 
 | t1 | t2 | volume_manual | cobertura_automatica | fn_auto | fn_auto_sobre_positivos | fp_auto | fp_auto_sobre_negativos | violacao | viavel |
 |---|---|---|---|---|---|---|---|---|---|
-| 0.3 | 0.31 | 0.0 | 1.0 | 10 | 0.0769 | 9 | 0.01 | 0.0 | True |
-| 0.34 | 0.35 | 0.0 | 1.0 | 11 | 0.0846 | 9 | 0.01 | 0.0 | True |
-| 0.33 | 0.34 | 0.0 | 1.0 | 11 | 0.0846 | 9 | 0.01 | 0.0 | True |
-| 0.33 | 0.35 | 0.0 | 1.0 | 11 | 0.0846 | 9 | 0.01 | 0.0 | True |
-| 0.32 | 0.33 | 0.0 | 1.0 | 11 | 0.0846 | 9 | 0.01 | 0.0 | True |
-| 0.32 | 0.34 | 0.0 | 1.0 | 11 | 0.0846 | 9 | 0.01 | 0.0 | True |
-| 0.32 | 0.35 | 0.0 | 1.0 | 11 | 0.0846 | 9 | 0.01 | 0.0 | True |
-| 0.31 | 0.32 | 0.001 | 0.999 | 10 | 0.0769 | 9 | 0.01 | 0.0 | True |
-| 0.31 | 0.33 | 0.001 | 0.999 | 10 | 0.0769 | 9 | 0.01 | 0.0 | True |
-| 0.31 | 0.34 | 0.001 | 0.999 | 10 | 0.0769 | 9 | 0.01 | 0.0 | True |
+| 0.11 | 0.7 | 0.0435 | 0.9565 | 3 | 0.0231 | 1 | 0.0011 | 0.0 | True |
+| 0.11 | 0.71 | 0.0445 | 0.9555 | 3 | 0.0231 | 1 | 0.0011 | 0.0 | True |
+| 0.1 | 0.7 | 0.0455 | 0.9545 | 3 | 0.0231 | 1 | 0.0011 | 0.0 | True |
+| 0.11 | 0.72 | 0.0464 | 0.9536 | 3 | 0.0231 | 1 | 0.0011 | 0.0 | True |
+| 0.1 | 0.71 | 0.0464 | 0.9536 | 3 | 0.0231 | 1 | 0.0011 | 0.0 | True |
+| 0.11 | 0.73 | 0.0474 | 0.9526 | 3 | 0.0231 | 1 | 0.0011 | 0.0 | True |
+| 0.11 | 0.74 | 0.0474 | 0.9526 | 3 | 0.0231 | 1 | 0.0011 | 0.0 | True |
+| 0.11 | 0.75 | 0.0484 | 0.9516 | 3 | 0.0231 | 1 | 0.0011 | 0.0 | True |
+| 0.1 | 0.72 | 0.0484 | 0.9516 | 3 | 0.0231 | 1 | 0.0011 | 0.0 | True |
+| 0.1 | 0.73 | 0.0493 | 0.9507 | 3 | 0.0231 | 1 | 0.0011 | 0.0 | True |
 
 ## band_report — validação — faixas
 
 | faixa | regra | n | pct_populacao_sobre_N | n_positivos | pct_positivos_sobre_n_faixa | n_negativos | pct_negativos_sobre_n_faixa |
 |---|---|---|---|---|---|---|---|
-| Negativa automática | p < t1 | 905 | 87.52 | 10 | 1.1 | 895 | 98.9 |
-| Análise manual | t1 ≤ p < t2 | 0 | 0.0 | 0 |  | 0 |  |
-| Positiva automática | p ≥ t2 | 129 | 12.48 | 120 | 93.02 | 9 | 6.98 |
-| Total | t1 = 0.3, t2 = 0.31 | 1034 | 100.0 | 130 | 12.57 | 904 | 87.43 |
+| Negativa automática | p < t1 | 881 | 85.2 | 3 | 0.34 | 878 | 99.66 |
+| Análise manual | t1 ≤ p < t2 | 45 | 4.35 | 20 | 44.44 | 25 | 55.56 |
+| Positiva automática | p ≥ t2 | 108 | 10.44 | 107 | 99.07 | 1 | 0.93 |
+| Total | t1 = 0.11, t2 = 0.7 | 1034 | 100.0 | 130 | 12.57 | 904 | 87.43 |
 
 ## band_report — validação — erros
 
 | metrica | valor | valor_pct | numerador | denominador | descricao_denominador |
 |---|---|---|---|---|---|
-| fn_auto | 10.0 |  | 10 |  | — (contagem) |
-| fn_auto_sobre_positivos | 0.0769 | 7.69 | 10 | 130 | total de positivos |
-| fn_auto_sobre_N | 0.0097 | 0.97 | 10 | 1034 | N (total de instâncias) |
-| fp_auto | 9.0 |  | 9 |  | — (contagem) |
-| fp_auto_sobre_negativos | 0.01 | 1.0 | 9 | 904 | total de negativos |
-| fp_auto_sobre_N | 0.0087 | 0.87 | 9 | 1034 | N (total de instâncias) |
-| cobertura_automatica | 1.0 | 100.0 | 1034 | 1034 | N (total de instâncias) |
-| volume_manual | 0.0 | 0.0 | 0 | 1034 | N (total de instâncias) |
+| fn_auto | 3.0 |  | 3 |  | — (contagem) |
+| fn_auto_sobre_positivos | 0.0231 | 2.31 | 3 | 130 | total de positivos |
+| fn_auto_sobre_N | 0.0029 | 0.29 | 3 | 1034 | N (total de instâncias) |
+| fp_auto | 1.0 |  | 1 |  | — (contagem) |
+| fp_auto_sobre_negativos | 0.0011 | 0.11 | 1 | 904 | total de negativos |
+| fp_auto_sobre_N | 0.001 | 0.1 | 1 | 1034 | N (total de instâncias) |
+| cobertura_automatica | 0.9565 | 95.65 | 989 | 1034 | N (total de instâncias) |
+| volume_manual | 0.0435 | 4.35 | 45 | 1034 | N (total de instâncias) |
 
 ## band_report — teste — faixas
 
 | faixa | regra | n | pct_populacao_sobre_N | n_positivos | pct_positivos_sobre_n_faixa | n_negativos | pct_negativos_sobre_n_faixa |
 |---|---|---|---|---|---|---|---|
-| Negativa automática | p < t1 | 909 | 87.83 | 14 | 1.54 | 895 | 98.46 |
-| Análise manual | t1 ≤ p < t2 | 0 | 0.0 | 0 |  | 0 |  |
-| Positiva automática | p ≥ t2 | 126 | 12.17 | 117 | 92.86 | 9 | 7.14 |
-| Total | t1 = 0.3, t2 = 0.31 | 1035 | 100.0 | 131 | 12.66 | 904 | 87.34 |
+| Negativa automática | p < t1 | 881 | 85.12 | 8 | 0.91 | 873 | 99.09 |
+| Análise manual | t1 ≤ p < t2 | 52 | 5.02 | 21 | 40.38 | 31 | 59.62 |
+| Positiva automática | p ≥ t2 | 102 | 9.86 | 102 | 100.0 | 0 | 0.0 |
+| Total | t1 = 0.11, t2 = 0.7 | 1035 | 100.0 | 131 | 12.66 | 904 | 87.34 |
 
 ## band_report — teste — erros
 
 | metrica | valor | valor_pct | numerador | denominador | descricao_denominador |
 |---|---|---|---|---|---|
-| fn_auto | 14.0 |  | 14 |  | — (contagem) |
-| fn_auto_sobre_positivos | 0.1069 | 10.69 | 14 | 131 | total de positivos |
-| fn_auto_sobre_N | 0.0135 | 1.35 | 14 | 1035 | N (total de instâncias) |
-| fp_auto | 9.0 |  | 9 |  | — (contagem) |
-| fp_auto_sobre_negativos | 0.01 | 1.0 | 9 | 904 | total de negativos |
-| fp_auto_sobre_N | 0.0087 | 0.87 | 9 | 1035 | N (total de instâncias) |
-| cobertura_automatica | 1.0 | 100.0 | 1035 | 1035 | N (total de instâncias) |
-| volume_manual | 0.0 | 0.0 | 0 | 1035 | N (total de instâncias) |
+| fn_auto | 8.0 |  | 8 |  | — (contagem) |
+| fn_auto_sobre_positivos | 0.0611 | 6.11 | 8 | 131 | total de positivos |
+| fn_auto_sobre_N | 0.0077 | 0.77 | 8 | 1035 | N (total de instâncias) |
+| fp_auto | 0.0 |  | 0 |  | — (contagem) |
+| fp_auto_sobre_negativos | 0.0 | 0.0 | 0 | 904 | total de negativos |
+| fp_auto_sobre_N | 0.0 | 0.0 | 0 | 1035 | N (total de instâncias) |
+| cobertura_automatica | 0.9498 | 94.98 | 983 | 1035 | N (total de instâncias) |
+| volume_manual | 0.0502 | 5.02 | 52 | 1035 | N (total de instâncias) |
 
 ## Tempo de execução (s)
 
 | etapa | segundos |
 |---|---|
-| carregar dados | 0.0075 |
-| split | 0.0035 |
-| tuning Regressão Logística | 33.6685 |
-| tuning Naive Bayes Multinomial | 6.9211 |
-| tuning LinearSVC calibrado | 5.1621 |
-| avaliação na validação | 0.0629 |
-| avaliação no teste | 0.0209 |
-| SHAP | 3.3134 |
+| carregar dados | 0.0093 |
+| split | 0.0047 |
+| tuning Regressão Logística | 0.0368 |
+| tuning Naive Bayes Multinomial | 0.0086 |
+| tuning LinearSVC calibrado | 0.0372 |
+| avaliação na validação | 0.0677 |
+| avaliação no teste | 0.0196 |
+| SHAP | 1.1534 |
 
 ## Figuras geradas
 

@@ -284,15 +284,16 @@ def plot_cutoff_histogram(y_true, y_proba, bin_width=0.1, t1=None, t2=None,
         rep = band_report(y_true, y_proba, t1, t2)["faixas"]
         spans = [(0, 100 * t1), (100 * t1, 100 * t2), (100 * t2, 100)]
         shades = ["#e6eefa", "#fff3d1", "#fde4e4"]
-        for k, ((a, b), shade) in enumerate(zip(spans, shades)):
+        edges = ["#9db5dc", "#e0c36a", "#e3a3a3"]
+        for k, ((a, b), shade, edge) in enumerate(zip(spans, shades, edges)):
             ax.axvspan(a, b, color=shade, alpha=0.7, zorder=0)
             r = rep.iloc[k]
             txt = f"{r['faixa']}\n{r['regra']}\n{r['pct_populacao_sobre_N']:.2f}% de N (n={r['n']})"
-            y_txt = 0.98 if k != 1 else 0.86  # alterna altura p/ faixas estreitas
-            x_txt = min(max((a + b) / 2, 9), 91)
-            ax.text(x_txt, y_txt, txt, transform=ax.get_xaxis_transform(),
+            # as tres anotacoes ficam lado a lado no topo, com a cor da faixa correspondente,
+            # para continuarem legiveis mesmo quando uma faixa e muito estreita
+            ax.text((2 * k + 1) / 6, 0.98, txt, transform=ax.transAxes,
                     ha="center", va="top", fontsize=8.5,
-                    bbox=dict(boxstyle="round,pad=0.25", fc="white", ec="0.7", alpha=0.9),
+                    bbox=dict(boxstyle="round,pad=0.3", fc=shade, ec=edge, lw=1.2),
                     zorder=5)
         for name, t in (("t1", t1), ("t2", t2)):
             ax.axvline(100 * t, color="black", ls="--", lw=1.3, zorder=4)

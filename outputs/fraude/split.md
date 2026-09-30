@@ -1,0 +1,5 @@
+| conjunto | n | pct_do_total | n_positivos | pct_positivos | n_negativos |
+|---|---|---|---|---|---|
+| treino | 170235 | 60.0 | 284 | 0.17 | 169951 |
+| validacao | 56745 | 20.0 | 94 | 0.17 | 56651 |
+| teste | 56746 | 20.0 | 95 | 0.17 | 56651 |

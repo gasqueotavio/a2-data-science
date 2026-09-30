@@ -28,8 +28,8 @@ DOMAINS = {
         "target_metric": "average_precision",
         "search": "grid",
         "bin_width": 0.10,
-        "max_fn_rate": 0.10,   # sobre o total de positivos
-        "max_fp_rate": 0.01,   # sobre o total de negativos
+        "max_fn_rate": 0.03,   # sobre o total de positivos (spam que escapa p/ a caixa de entrada)
+        "max_fp_rate": 0.002,  # sobre o total de negativos (mensagem legítima enviada ao lixo)
     },
     "fraude": {
         "csv": DATA_DIR / "fraude.csv",
@@ -40,8 +40,8 @@ DOMAINS = {
         "search": "random",
         "n_iter": 15,
         "bin_width": 0.05,
-        "max_fn_rate": 0.05,
-        "max_fp_rate": 0.02,
+        "max_fn_rate": 0.10,    # fraude aprovada automaticamente (sobre o total de fraudes)
+        "max_fp_rate": 0.0002,  # transação legítima bloqueada automaticamente (sobre legítimas)
     },
     "exame_medico": {
         "csv": DATA_DIR / "exame_medico.csv",

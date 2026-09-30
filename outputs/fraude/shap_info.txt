@@ -1,0 +1,9 @@
+Domínio: fraude
+Modelo explicado: Random Forest (RandomForestClassifier)
+Explainer: TreeExplainer
+Saída do modelo explicada: probabilidade da classe positiva (predict_proba[:, 1])
+Dados explicados: 1000 instâncias aleatórias do conjunto de TESTE (random_state=42), transformadas pelo pré-processamento do pipeline
+Conjunto de fundo (background): 100 instâncias aleatórias do TREINO
+Número de features após o pré-processamento: 30
+Beeswarm: max_display=15; cor = valor da feature (vermelho alto, azul baixo); eixo X = contribuição SHAP para a saída explicada
+Limitação: V1–V28 são componentes PCA anônimos fornecidos pela base; não têm significado de negócio interpretável. Apenas Time e Amount são variáveis originais.
